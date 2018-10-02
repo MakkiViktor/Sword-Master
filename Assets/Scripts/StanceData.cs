@@ -4,21 +4,13 @@
 using UnityEditor;
 #endif
 
-[System.Serializable]
+[CreateAssetMenu(fileName = "New Stance", menuName = "Stance")]
 public class StanceData : ScriptableObject
 {
-	#if UNITY_EDITOR
-	[MenuItem("Tools/Create/Stance Data")]
-	public static void Create()
-	{
-		StanceData asset = CreateInstance<StanceData>();
-		AssetDatabase.CreateAsset(asset, "Assets/StanceData.asset");
-		AssetDatabase.SaveAssets();
-		EditorUtility.FocusProjectWindow();
-		Selection.activeObject = asset;
-	}
-	#endif
-
-	public string stanceName;
-	public int randomNumberAboutThisStance;
+	public Animation UpperCut;
+	public Animation UpperParry;
+	public Animation RightCut;
+	public Animation RightParry;
+	public Animation LeftCut;
+	public Animation LeftParry;
 }
