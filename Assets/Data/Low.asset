@@ -9,7 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffde1b3b222eb6d46bd9dfc14f5e882d, type: 3}
-  m_Name: LightStanceData
+  m_Name: Low
   m_EditorClassIdentifier: 
-  stanceName: Ligh Stance
-  randomNumberAboutThisStance: 11
+  stanceName: Low
+  stanceAnimation:
+  - animation: {fileID: 7400000, guid: b203a79d18a50ba46a0f7f7e7b669eaa, type: 2}
+    state: 0

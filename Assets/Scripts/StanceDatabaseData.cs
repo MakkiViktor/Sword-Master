@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using UnityEditor;
 #endif
 
-[CreateAssetMenu(fileName = "New StanceDataBase", menuName = "StanceDatabase")]
+[CreateAssetMenu(fileName = "New StanceDatabase", menuName = "StanceDatabase")]
 public class StanceDatabase : ScriptableObject
 {
+	public string StanceDBname;
 	public List<StanceData> stanceList;
 }

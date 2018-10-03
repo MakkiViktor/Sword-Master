@@ -1,0 +1,10 @@
+﻿namespace ConstsEnums {
+	
+	public enum AnimationStates
+	{
+		VOID = -1,
+		UPPERCUT = 0, RIGHTCUT = 1, LEFTCUT = 2, UPPERPARRY = 3, RIGHTPARRY = 4, LEFTPARRY = 5, 
+		CLOSEUPCUT = 6, CLOSERIGHTCUT = 7, CLOSELEFTCUT = 8, CLOSEUPPERPARRY = 9, CLOSERIGHTPARRY = 10, CLOSELEFTPARRY = 11
+	}
+			
+}
