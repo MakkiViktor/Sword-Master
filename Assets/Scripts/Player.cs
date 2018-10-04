@@ -19,24 +19,24 @@ public class Player : MonoBehaviour {
 	}
 		
 	void Update () {
-		Vector3 Move = new Vector3();
-		Move.x += Time.deltaTime * speed * Input.GetAxis ("Horizontal");
-		Move.z += Time.deltaTime * speed * Input.GetAxis ("Vertical");
-		transform.position += Move;
-		InputHandler ();
 
+		InputHandler ();
 	}
 
-	void InputHandler ()
+	public void InputHandler ()
 	{
-		if (Input.GetAxis ("SwitchStance") != 0) {
+		Vector3 Move = new Vector3();
+		Move.x += Time.deltaTime * speed * Input.GetAxis ("Left Stick X");
+		Move.z += Time.deltaTime * speed * Input.GetAxis ("Left Stick Y");
+		transform.position += Move;
+
+		if (Input.GetButtonDown ("O Button")) {
 			stanceIndex = (stanceIndex + 1) % stanceDataBase.stanceList.Count;
-			Debug.Log ("Switched to Index: " + stanceIndex);
 			animationSwitcher.switchAnimationClips (stanceDataBase.stanceList [stanceIndex]);
 			Debug.Log ("Switched to Index: " + stanceIndex);
 		} 
 
-		if (Input.GetAxis ("Move") != 0) {
+		if (Input.GetButtonDown ("X Button")) {
 			animator.SetInteger ("AnimationState", 1);	
 		}
 	}
