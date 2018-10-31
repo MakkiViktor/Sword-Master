@@ -1499,6 +1499,7 @@ MonoBehaviour:
   speed: 0
   stanceDataBase: {fileID: 11400000, guid: 83e8b19c089c94349b013c5dd2c32231, type: 2}
   stanceIndex: 0
+  camera: {fileID: 176037245}
 --- !u!95 &1140738424
 Animator:
   serializedVersion: 3

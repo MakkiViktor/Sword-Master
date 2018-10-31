@@ -104,5 +104,9 @@ public class PlayerCamera : MonoBehaviour
             corners[i] = transform.rotation * offsets[i] + lookAt.position;
         }
     }
+
+    public float getXRotation() {
+        return currentX;
+    }
 }
 

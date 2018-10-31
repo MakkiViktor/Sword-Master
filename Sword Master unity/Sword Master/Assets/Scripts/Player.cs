@@ -8,6 +8,8 @@ public class Player : MonoBehaviour {
 	public float speed;
 	public StanceDatabase stanceDataBase;
 	public int stanceIndex = 0;
+    public PlayerCamera camera;
+
 	private AnimationSwitcher animationSwitcher;
 	private Animator animator;
 
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour {
 	void Update () {
 
 		InputHandler ();
+        transform.rotation = Quaternion.Euler(0, camera.getXRotation(), 0);
 	}
 
 	public void InputHandler ()
@@ -32,18 +35,17 @@ public class Player : MonoBehaviour {
 		transform.position += Move;
         */
 
-        animator.SetFloat("Move X", Input.GetAxis("Left Stick X"));
-        animator.SetFloat("Move Y", -Input.GetAxis("Left Stick Y"));
+        animator.SetFloat("Move X", Input.GetAxis(Controller.LeftStickX));
+        animator.SetFloat("Move Y", -Input.GetAxis(Controller.LeftStickY));
 
-
-        if (Input.GetButtonDown ("O Button")) {
+        if (Input.GetButtonDown (Controller.OButton)) {
 			stanceIndex = (stanceIndex + 1) % stanceDataBase.stanceList.Count;
 			animationSwitcher.switchAnimationClips (stanceDataBase.stanceList [stanceIndex]);
 			Debug.Log ("Switched to Index: " + stanceIndex);
 		} 
 
-		if (Input.GetButtonDown ("X Button")) {
-			animator.SetInteger ("AnimationState", 1);	
+		if (Input.GetButtonDown (Controller.XButton)) {
+			animator.SetInteger ("AnimationState", (int) AnimationStates.RIGHTCUT);	
 		}
 	}
 

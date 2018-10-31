@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stanceName: High
   stanceAnimation:
-  - animation: {fileID: 7400000, guid: ffd60e25b231eaf41a9f85aa4584fb71, type: 2}
-    state: 0
+  - animation: {fileID: 7400000, guid: 1a78d1947aa09bf4aac177d93d2f3f7f, type: 3}
+    state: -1
