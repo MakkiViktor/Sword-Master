@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ConstsEnums;
 
 public class PlayerCamera : MonoBehaviour
 {
@@ -11,11 +12,13 @@ public class PlayerCamera : MonoBehaviour
     public float targetSizeViewportY = 1.0f;    //Same on y axis    
     public float maxDistance = 5.0f;            //Maximum distance from the target
 
+
     public float sensivityX = 10.0f;            //Camera move speed on y
     public float sensivityY = 10.0f;            //Camera move speed on x
     public float YAngleMin = -50.0f;            //Min degree on Y    
     public float YAngleMax = 50.0f;             //Max degree on Y    
 
+    private InputHandler input;
     private float currentX = 0.0f;
     private float currentY = 0.0f;
     private float distance;
@@ -25,6 +28,7 @@ public class PlayerCamera : MonoBehaviour
 
     void Start()
     {
+        input = GetComponent<InputHandler>();
         corners = new Vector3[4];
         offsets = new Vector3[4];
         //Offset of the corners in target space
@@ -41,8 +45,8 @@ public class PlayerCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentX += Input.GetAxis("Right Stick X") * sensivityX;
-        currentY += Input.GetAxis("Right Stick Y") * sensivityY;
+        currentX +=  input.getAxis(InputSettings.LOOKX)* sensivityX;
+        currentY += input.getAxis(InputSettings.LOOKY) * sensivityY;
         currentY = Mathf.Clamp(currentY, YAngleMin, YAngleMax);
         distance = (transform.position - lookAt.position).magnitude;
         CalculateViewCorners();

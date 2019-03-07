@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sword Master", "Assembly-CSharp.csproj", "{1CEC3A96-24B6-12EA-8CE3-D0B0DFA2B10C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1CEC3A96-24B6-12EA-8CE3-D0B0DFA2B10C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

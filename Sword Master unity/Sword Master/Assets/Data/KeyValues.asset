@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: KeyValues
+  m_EditorClassIdentifier: Assembly-CSharp::KeyValueData
+  KeyValues:
+  - Key: 0
+    Value: Left Stick X
+  - Key: 1
+    Value: Left Stick Y
+  - Key: 2
+    Value: Right Stick X
+  - Key: 3
+    Value: Right Stick Y
+  - Key: 4
+    Value: DPAD Down

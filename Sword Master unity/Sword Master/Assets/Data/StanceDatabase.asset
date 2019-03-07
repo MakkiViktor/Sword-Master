@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: StanceDatabase
   m_EditorClassIdentifier: Assembly-CSharp::StanceDatabase
-  StanceDBname: DefaultStances
+  StanceDBname: default
   stanceList:
   - {fileID: 11400000, guid: f015fc09b3be679489e75d47d07cea5e, type: 2}
   - {fileID: 11400000, guid: aa1c8c2008e56e9409b0db9482965313, type: 2}

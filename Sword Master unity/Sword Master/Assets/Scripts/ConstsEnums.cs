@@ -1,10 +1,34 @@
-﻿namespace ConstsEnums {
+﻿using System.Collections.Generic;
+
+namespace ConstsEnums {
 
     public enum AnimationStates
     {
         VOID = -1,
-        UPPERCUT = 0, RIGHTCUT = 1, LEFTCUT = 2, UPPERPARRY = 3, RIGHTPARRY = 4, LEFTPARRY = 5,
-        CLOSEUPCUT = 6, CLOSERIGHTCUT = 7, CLOSELEFTCUT = 8, CLOSEUPPERPARRY = 9, CLOSERIGHTPARRY = 10, CLOSELEFTPARRY = 11
+        IDLE = 0, 
+        MOVE = 1,
+        SWITCH = 2
+    }
+
+    public enum InputSettings {
+       MOVEX,
+       MOVEY,
+       LOOKX,
+       LOOKY,
+       SWITCH,
+    }
+
+    //Az összes név a PlayerOverrideControllerből
+    public static class AnimationClipNames {
+        public const string BodyIdleR = "Armature|BodyIdle.R";
+        public const string BodyIdleL = "Armature|BodyIdle.R";
+    }
+
+    public static class AnimatorParameters {
+        public const string MoveX = "Move X";
+        public const string MoveY = "Move Y";
+        public const string AnimationState = "AnimationState";
+        public const string StanceSide = "StanceSide";
     }
 
     public static class Controller {
@@ -22,13 +46,15 @@
         public const string R2Button = "R2 Button";
         public const string L3Button = "L3 Button";
         public const string R3Button = "R3 Button";
+        public const string OptionButton = "Option Button";
         public const string DPADX = "DPAD X";
         public const string DPADY = "DPAD Y";
-        public const string OptionButton = "Option Button";
 
+        //Ez nem bemenet, a nyilak megkülönbözttetéséhez kell
+        public const string DPADUp = "DPAD Up";
+        public const string DPADDown = "DPAD Down";
+        public const string DPADRight = "DPAD Right";
+        public const string DPADLeft = "DPAD Left";
 
     }
-    
-
-			
 }

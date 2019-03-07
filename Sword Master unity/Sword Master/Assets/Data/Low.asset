@@ -15,9 +15,3 @@ MonoBehaviour:
   stanceAnimation:
   - animation: {fileID: 7400000, guid: 1a78d1947aa09bf4aac177d93d2f3f7f, type: 3}
     state: -1
-  - animation: {fileID: 7400000, guid: b203a79d18a50ba46a0f7f7e7b669eaa, type: 2}
-    state: 0
-  - animation: {fileID: 7400000, guid: b203a79d18a50ba46a0f7f7e7b669eaa, type: 2}
-    state: 0
-  - animation: {fileID: 7400000, guid: b203a79d18a50ba46a0f7f7e7b669eaa, type: 2}
-    state: 0

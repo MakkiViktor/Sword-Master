@@ -13,7 +13,7 @@ public struct NamedStanceAnimation{
 	public AnimationStates state;
 }
 
-[CreateAssetMenu(fileName = "New Stance", menuName = "Stance")]
+[CreateAssetMenu(fileName = "Stance", menuName = "New Stance")]
 public class StanceData : ScriptableObject
 {
 	public string stanceName;

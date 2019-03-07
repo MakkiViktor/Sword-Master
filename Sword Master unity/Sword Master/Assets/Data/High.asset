@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stanceName: High
   stanceAnimation:
-  - animation: {fileID: 7400000, guid: 1a78d1947aa09bf4aac177d93d2f3f7f, type: 3}
+  - animation: {fileID: 7400002, guid: b5207f9e6eecc754d9ffca7eb287db87, type: 3}
     state: -1
